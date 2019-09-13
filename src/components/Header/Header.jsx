@@ -1,8 +1,9 @@
 import React from 'react';
+import './Header.css';
 
 const Header = () => (
-    <div>
-        Hello!!
+    <div className="header-section">
+        My Calculator
     </div>
 );
 
