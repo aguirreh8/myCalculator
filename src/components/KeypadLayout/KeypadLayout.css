@@ -1,0 +1,7 @@
+.keypad-layout {
+    width: 60%;
+    height: 300px;
+    margin: 0 auto;
+    background-color: gray;
+    overflow: auto;
+}
