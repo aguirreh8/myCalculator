@@ -1,0 +1,6 @@
+.keypad-number-btn {
+    display: inline-block;
+    min-width: 33.3%;
+    height: 100px;
+    background-color: gray;
+  }
