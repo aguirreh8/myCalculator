@@ -23,6 +23,12 @@ class App extends Component {
   };
 
   render() {
+	const numButtons = [];
+
+	for (let i = 1; i < 10; i++) {
+		numButtons.push(<NumberKeypad value={i} handleDisplayInput={this.handleDisplayInput}>{i}</NumberKeypad>)
+	}
+	
     return (
       <div className="App">
         <Header />
@@ -30,30 +36,7 @@ class App extends Component {
           <Display currentValue={this.state.currentValue} />
           <div className="keypad-layout">
             <div className="keypad-numBtn-layout">
-              <NumberKeypad
-                value="1"
-                handleDisplayInput={this.handleDisplayInput}
-              >
-                1
-              </NumberKeypad>
-              <NumberKeypad
-                value="2"
-                handleDisplayInput={this.handleDisplayInput}
-              >
-                2
-              </NumberKeypad>
-              <NumberKeypad
-                value="3"
-                handleDisplayInput={this.handleDisplayInput}
-              >
-                3
-              </NumberKeypad>
-              <NumberKeypad
-                value="4"
-                handleDisplayInput={this.handleDisplayInput}
-              >
-                4
-              </NumberKeypad>
+				{numButtons}
             </div>
           </div>
         </Main>
