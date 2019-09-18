@@ -4,10 +4,12 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Display from "./components/Display";
 import NumberKeypad from "./components/NumberKeypad";
+import OperandKeypad from "./components/OperandKeypad";
 
 class App extends Component {
   state = {
-    currentValue: "0"
+    currentValue: "0",
+    operand: ""
   };
 
   handleDisplayInput = input => {
@@ -51,6 +53,12 @@ class App extends Component {
           <Display currentValue={this.state.currentValue} />
           <div className="keypad-layout">
             <div className="keypad-numBtn-layout">{numButtons}</div>
+            <div className="keypad-opBtn-layout">
+              <button style={{height:"150px", width:"50%"}}>+</button>
+              <button style={{height:"150px", width:"50%"}}>-</button>
+              <button style={{height:"150px", width:"50%"}}>*</button>
+              <button style={{height:"150px", width:"50%"}}>/</button>
+            </div>
           </div>
         </Main>
       </div>
