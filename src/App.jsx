@@ -11,33 +11,46 @@ class App extends Component {
   };
 
   handleDisplayInput = input => {
+    let t = input.toString();
     if (this.state.currentValue !== "0") {
       this.setState({
-        currentValue: this.state.currentValue + input
+        currentValue: this.state.currentValue + t
       });
     } else {
       this.setState({
-        currentValue: input
+        currentValue: t
       });
     }
   };
 
   render() {
-	const numButtons = [];
+    const numButtons = [];
 
-	for (let i = 1; i < 10; i++) {
-		numButtons.push(<NumberKeypad value={i} handleDisplayInput={this.handleDisplayInput}>{i}</NumberKeypad>)
-	}
-	
+    for (let i = 0; i < 10; i++) {
+      let j = i + 1;
+      if (j < 10) {
+        numButtons.push(
+          <NumberKeypad value={j} handleDisplayInput={this.handleDisplayInput} btnStyle="keypad-number-btn">
+            {j}
+          </NumberKeypad>
+        )
+      } else {
+        j = 0;
+        numButtons.push(
+          <NumberKeypad value={j} handleDisplayInput={this.handleDisplayInput} btnStyle="keypad-number-btn-large">
+            {j}
+          </NumberKeypad>
+        )
+      }
+    }
+
     return (
       <div className="App">
         <Header />
         <Main>
           <Display currentValue={this.state.currentValue} />
           <div className="keypad-layout">
-            <div className="keypad-numBtn-layout">
-				{numButtons}
-            </div>
+            <div className="keypad-numBtn-layout">{numButtons}</div>
           </div>
         </Main>
       </div>

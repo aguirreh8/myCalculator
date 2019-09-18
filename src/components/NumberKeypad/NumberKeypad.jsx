@@ -3,7 +3,7 @@ import "./NumberKeypad.css";
 
 const NumberKeypad = props => (
     <button 
-        className="keypad-number-btn"
+        className={props.btnStyle}
         onClick={() => props.handleDisplayInput(props.value)}
     >
         {props.children}
