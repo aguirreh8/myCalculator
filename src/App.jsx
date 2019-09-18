@@ -54,10 +54,11 @@ class App extends Component {
           <div className="keypad-layout">
             <div className="keypad-numBtn-layout">{numButtons}</div>
             <div className="keypad-opBtn-layout">
-              <button style={{height:"150px", width:"50%"}}>+</button>
-              <button style={{height:"150px", width:"50%"}}>-</button>
-              <button style={{height:"150px", width:"50%"}}>*</button>
-              <button style={{height:"150px", width:"50%"}}>/</button>
+              <OperandKeypad btnStyle="keypad-operand-btn">+</OperandKeypad>
+              <OperandKeypad btnStyle="keypad-operand-btn">-</OperandKeypad>
+              <OperandKeypad btnStyle="keypad-operand-btn">x</OperandKeypad>
+              <OperandKeypad btnStyle="keypad-operand-btn">/</OperandKeypad>
+              <OperandKeypad btnStyle="keypad-operand-btn-large">=</OperandKeypad>
             </div>
           </div>
         </Main>

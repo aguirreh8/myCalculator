@@ -1,4 +1,5 @@
 import React from "react";
+import "./OperandKeypad.css";
 
 const OperandKeypad = props => (
     <button className={props.btnStyle}>
