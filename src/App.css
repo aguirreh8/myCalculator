@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 .keypad-layout {
   width: 60%;
   height: 370px;
