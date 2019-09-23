@@ -19,3 +19,9 @@
   height: 100%;
   background-color: green;
 }
+
+@media screen and (max-width:768px) {
+  .keypad-layout {
+    width: 100%;
+  }
+}

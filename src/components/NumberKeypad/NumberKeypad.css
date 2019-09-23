@@ -1,13 +1,13 @@
 .keypad-number-btn {
   display: inline-block;
   min-width: 33.3%;
-  height: 100px;
+  height: 25%;
   background-color: gray;
 }
 
 .keypad-number-btn-large {
   display: inline-block;
   min-width: 100%;
-  height: 70px;
+  height: 25%;
   background-color: gray;
 }

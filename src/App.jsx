@@ -32,8 +32,11 @@ class App extends Component {
       let j = i + 1;
       if (j < 10) {
         numButtons.push(
-          <NumberKeypad value={j} handleDisplayInput={this.handleDisplayInput} btnStyle="keypad-number-btn">
-            {j}
+          <NumberKeypad 
+            value={j} 
+            handleDisplayInput={this.handleDisplayInput} 
+            btnStyle="keypad-number-btn">
+              {j}
           </NumberKeypad>
         )
       } else {
